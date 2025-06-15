@@ -1,0 +1,30 @@
+# macOS system files
+.DS_Store
+
+# Node modules (if using npm tooling in the future)
+node_modules/
+
+# Build output (if using a build tool later)
+dist/
+build/
+
+# Logs
+*.log
+
+# VSCode settings
+.vscode/
+
+# JetBrains IDEs (e.g., WebStorm)
+.idea/
+
+# Environment variables
+.env
+.env.*
+
+# OS-generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Cache
+.cache/
