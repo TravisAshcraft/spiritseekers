@@ -1,0 +1,445 @@
+/* ==========================================================================
+   Contact Form Centered Container
+   ========================================================================== */
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Import Retro Horror Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+/* Spirit Seekers 80s Horror Theme */
+
+:root {
+  --primary-red: #ff004c;
+  --accent-pink: #ff66b2;
+  --electric-purple: #9b59ff;
+  --neon-blue: #00e5ff;
+}
+
+body {
+  display: block;
+  background-color: #0b000d;
+  background-image:
+    /* Noise overlay */
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.01) 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.01) 1px, transparent 3px 6px),
+    radial-gradient(circle at center, #0b000d 0%, #000000 100%);
+  color: #fefefe;
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 0 3px var(--primary-red), 0 0 6px #000;
+}
+
+header {
+  background-color: #1a000a;
+  color: var(--primary-red);
+  padding: 1.2em;
+  text-align: center;
+  border-bottom: 4px double var(--primary-red);
+  box-shadow: 0 0 10px var(--primary-red);
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 6px var(--primary-red), 0 0 20px #000;
+}
+
+nav a {
+  color: var(--accent-pink);
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 4px var(--accent-pink);
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+nav a:hover {
+  color: var(--neon-blue);
+  text-shadow: 0 0 6px var(--neon-blue), 0 0 12px var(--electric-purple);
+}
+
+h1, h2, h3 {
+  color: var(--primary-red);
+  text-shadow: 0 0 4px var(--electric-purple), 0 0 8px #000;
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: var(--electric-purple);
+  text-decoration: underline;
+  text-shadow: 0 0 2px var(--neon-blue);
+}
+
+button {
+  background-color: var(--electric-purple);
+  color: #fff;
+  border: 2px solid var(--primary-red);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--neon-blue);
+  text-shadow: 0 0 2px #000, 0 0 8px var(--primary-red);
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  background-color: var(--neon-blue);
+  color: #000;
+  border-color: #fff;
+  box-shadow: 0 0 12px var(--electric-purple), 0 0 20px #fff;
+}
+
+form input, form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  background-color: #1a001a;
+  border: 2px solid var(--accent-pink);
+  color: #fff;
+  font-family: inherit;
+  box-shadow: 0 0 5px var(--electric-purple);
+  text-shadow: 0 0 2px var(--neon-blue);
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* ==========================================================================
+   Content Container for Centered Index Page
+   ========================================================================== */
+
+.content-container {
+  max-width: 960px;
+  width: 90%;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px var(--electric-purple);
+}
+
+/* Updated .profile-photo class for better image size control */
+.profile-photo {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border: 3px solid var(--primary-red);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--electric-purple);
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  color: var(--accent-pink);
+  background-color: #1a000a;
+  border-top: 2px solid var(--primary-red);
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 4px var(--primary-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Bio layout wrapper */
+.bio-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.bio-section img {
+  max-width: 300px;
+  width: 100%;
+  border: 3px solid var(--primary-red);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--electric-purple);
+}
+
+@media (min-width: 768px) {
+  .bio-section {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .bio-section img {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile-photo {
+    max-width: 300px;
+  }
+}
+
+h1 {
+  font-family: 'Creepster', cursive;
+}
+
+body {
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
